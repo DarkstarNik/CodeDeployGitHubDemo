@@ -4,11 +4,11 @@ files:
   - source: .
     destination: /var/www/gitTest
 #todo: Add in hooks to test running builds
-#hooks:
-#  AfterInstall:
-#   - location: scripts/install_app_dependencies
-#     timeout: 300
-#     runas: root
+hooks:
+  AfterInstall:
+   - location: scripts/test-after-install.sh
+     timeout: 300
+     runas: root
 #  ApplicationStart:
 #   - location: scripts/start_server
 #     timeout: 300
